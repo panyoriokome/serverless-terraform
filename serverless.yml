@@ -1,0 +1,12 @@
+service: sample-lambda-serverless
+provider:
+  name: aws
+  lambdaHashingVersion: 20201221
+
+functions:
+  sample:
+    runtime: python3.8
+    handler: handler.handler
+    module: functions.sample
+plugins:
+  - serverless-python-requirements
